@@ -21,5 +21,9 @@ void addNode()
     }
     // insert the new node in the list
     if (START == NULL || nownode->noMhs <= START->noMHS)
-    
+    { // step 2 insert the new node at the beginning 
+
+    if (START != NULL && newNodde->noMhs == START->noMhs)
+
+    }
 }
