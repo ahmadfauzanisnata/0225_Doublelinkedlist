@@ -132,3 +132,17 @@ bool lisempty()
 {
     return (START == NULL);
 }
+void traverse()
+{
+    if (lisempty())
+    cout << "\nList is empty" << endl;
+    else{
+        cout << "\nRecord in ascending ordder of roll number area:" << endl;
+        Node *currentNode = START; // step 1
+        while (currentNode != NULL) //step 2
+        {
+            cout << currentNode->noMhs << " " << currentNode->name << endl;
+            currentNode = currentNode->next;
+        }
+    }
+}
