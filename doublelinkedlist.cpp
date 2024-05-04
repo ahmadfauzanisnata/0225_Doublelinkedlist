@@ -123,4 +123,7 @@ void deleteNode()
             current->next->prev = previous;
         }
     }
+    // relase thhe memory of the node marked as current
+    delete current;
+    cout << "\x1b[32mRecord with roll number " << rollNo << " delete \x1b[0m" << endl;
 }
