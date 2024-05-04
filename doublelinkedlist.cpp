@@ -128,13 +128,13 @@ void deleteNode()
     cout << "\x1b[32mRecord with roll number " << rollNo << " delete \x1b[0m" << endl;
 }
 
-bool lisempty()
+bool listEmpty()
 {
     return (START == NULL);
 }
 void traverse()
 {
-    if (lisempty())
+    if (listEmpty())
     cout << "\nList is empty" << endl;
     else{
         cout << "\nRecord in ascending ordder of roll number area:" << endl;
@@ -149,7 +149,7 @@ void traverse()
 void revtraverse()
 {
     
-    if (lisempty())
+    if (listEmpty())
     cout << "\nList is empty" << endl;
     else
     {
@@ -163,5 +163,24 @@ void revtraverse()
              cout << currentNode->noMhs << " " << currentNode->name << endl;
             currentNode = currentNode->prev;
         }
+    }
+}
+void dearchData()
+{
+    if (listEmpty() == true)
+    {
+        cout << "\nList is empty" << endl;
+    }
+    Node *prev, *curr;
+    prev = curr = NULL;
+    cout << "\nEnter the roll number of the student whose record you want to search: ";
+    int num;
+    cin >> num;
+    if (search(num, &prev, &curr) == false)
+    cout << "\nrecord not found" << endl;
+    else{
+        cout << "\nRecord found" << endl;
+        cout << "\nRoll number: " << curr->noMhs << endl;
+        cout << "\nName: " << curr->name << endl;
     }
 }
